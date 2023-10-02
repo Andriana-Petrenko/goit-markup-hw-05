@@ -21,6 +21,10 @@ img {
     display: block;
 }
 
+input {
+    font-family: inherit;
+}
+
 .container {
     max-width: 100%;
     width: 1158px;
@@ -414,6 +418,7 @@ img {
 
 .box-social{
     display: inline-block;
+    margin-right: 80px;
 }
 
 .media{
@@ -456,4 +461,115 @@ img {
 
 .end {
     color: #F4F4FD;
+}
+
+.form-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.form-lable{
+    display: inline-block;
+}
+
+.form-input{
+    width: 264px;
+    height: 40px;
+    background-color:#2E2F42;
+    border: 1px solid  #FFFFFF;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    padding-left: 16px;
+}
+
+.form-input::placeholder{
+    color: #FFFFFF;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.48px;
+}
+
+.form-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    background-color: #4D5AE5;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.64px;
+    cursor: pointer;
+    min-width: 165px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    margin: 0 auto;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-button:hover,
+.form-button:focus {
+    background-color: #404BBF;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Модальне вікно */
+
+.form-contacts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #8E8F99;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.48px;
+
+}
+
+.form-title{
+    color:#2E2F42;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.32px;
+    margin-bottom: 16px;
+}
+
+.form-text{
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    height: 40px;
+    gap: 8px;
+    border-radius: 4px;
+    border: 1px solid rgba(46, 47, 66, 0.40);
+    
+
+}
+
+.textarea{
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    gap: 8px;
+    border-radius: 4px;
+    border: 1px solid rgba(46, 47, 66, 0.40);
+    height: 120px;
+    margin-bottom: 16px;
+}
+
+/* .text-accept{
+margin-right: 8px;
+} */
+
+input+a{
+    color:#4D5AE5;
 }
