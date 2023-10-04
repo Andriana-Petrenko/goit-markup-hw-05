@@ -87,7 +87,7 @@ input {
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
-    letter-spacing: 0.32px;
+    letter-spacing: 0.02em;
     text-decoration:none;
     text-transform: capitalize;
     color: #2E2F42;
@@ -134,7 +134,7 @@ input {
     color: #434455;
     font-size: 16px;
     line-height: 1.5;
-    letter-spacing: 0.32px;
+    letter-spacing: 0.02em;
     text-decoration: none;
     padding: 24px 0;
     transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -228,7 +228,7 @@ input {
     color: #434455;
     font-size: 16px;
     line-height: 1.5;
-    letter-spacing: 0.32px;
+    letter-spacing: 0.02em;
 }
 
 .team {
@@ -278,7 +278,7 @@ input {
     color: #434455;
     font-size: 16px;
     line-height: 1.5;
-    letter-spacing: 0.32px;
+    letter-spacing: 0.02em;
     margin-bottom: 8px;
 }
 
@@ -347,7 +347,7 @@ input {
     color: #434455;
     font-size: 16px;
     line-height: 1.5;
-    letter-spacing: 0.32px;
+    letter-spacing: 0.02em;
 }
 
 .container-app {
@@ -375,7 +375,7 @@ input {
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     font-size: 16px;
     line-height: 1.5;
-    letter-spacing: 0.32px;
+    letter-spacing: 0.02em;
     color: #F4F4FD;
     padding: 40px 32px;
 }
@@ -413,7 +413,7 @@ input {
     color: #F4F4FD;
     font-size: 16px;
     line-height: 1.5;
-    letter-spacing: 0.32px;
+    letter-spacing: 0.02em;
     width: 264px;
 }
 
@@ -470,24 +470,28 @@ input {
 }
 
 .form-lable{
-    display: inline-block;
+    
+    
 }
+
 
 .form-input{
     width: 264px;
     height: 40px;
-    background-color:#2E2F42;
+    background-color:transparent;
     border: 1px solid  #FFFFFF;
     border-radius: 4px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     padding-left: 16px;
+    color: #FFFFFF;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
 }
 
 .form-input::placeholder{
     color: #FFFFFF;
-    font-size: 12px;
-    line-height: 2;
-    letter-spacing: 0.48px;
 }
 
 .form-button {
@@ -522,11 +526,12 @@ input {
 /* Модальне вікно */
 
 .backdrop{
+    position: fixed;
     width: 100%;
     height: 100%;
     background-color: rgba(46, 47, 66, 0.40);
-    position: fixed;
     top: 0;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-open{
@@ -540,11 +545,13 @@ input {
     min-height: 584px;  
     border-radius: 4px;
     background-color: #FCFCFC;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     position: absolute;
     top:50%;
     left: 50%;
     transform: translate(-50%,-50%);
     padding: 72px 24px 24px 24px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -561,16 +568,31 @@ input {
     border: none;
     border: 1px solid rgba(0, 0, 0, 0.10);
     background-color:#E7E9FC;
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     
 }
 
 
+.modal-btn-close:hover,
+.modal-btn-close:focus{
+background-color: #404bbf;
+border: none;
+}
+
 .icon-close{
-    fill: #2E2F42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-btn-close:hover .icon-close,
+.modal-btn-close:focus .icon-close{
+    fill:#ffffff;
 }
 
 .form-modal{
-   
+margin-bottom: 8px;
  
 }
 
@@ -580,16 +602,16 @@ input {
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
-    letter-spacing: 0.32px;
+    letter-spacing: 0.02em;
     margin-bottom: 16px;
 }
 
 .modal-label{
-    display: inline-block;
+    display:block;
     color:#8E8F99;
     font-size: 12px;
     line-height: 1.17;
-    letter-spacing: 0.48px;
+    letter-spacing: 0.04em;
     margin-bottom: 4px;
 }
 
@@ -625,20 +647,21 @@ input {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.textarea-wrap{
+    margin-bottom: 16px;
+}
 
 .form-textarea{
-    width: 360px;
+    width: 100%;
     height: 120px;  
     border-radius: 4px;
     border: 1px solid rgba(46, 47, 66, 0.40);
-    height: 120px;
-    margin-bottom: 16px;
     resize: none;
     outline: none;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    padding-top:8px;
-    padding-left: 16px;
+    padding:8px 16px;
     color: rgba(46, 47, 66, 0.40);
+    background-color: transparent;
 
 }
 
@@ -649,20 +672,35 @@ input {
 .form-textarea::placeholder{
     color:rgba(46, 47, 66, 0.40);  
     font-size: 12px;
-    font-weight: 400;
     line-height: 1.17;
-    letter-spacing: 0.48px;
+    letter-spacing: 0.04em;
 }
 
-.modal-label-accept{
-position: relative;
+.check-wrap{
+     margin-bottom: 24px;
 }
 
-.text-accept{
-    margin-right: 8px;
-    margin-bottom: 24px;
+.check-text{
+    color: #8E8F99;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+   
 }
 
-input+a{
-    color:#4D5AE5;
+.check{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    fill: transparent;
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.privacy-link{
+    color: #4D5AE5;
+    text-decoration: underline;
 }
