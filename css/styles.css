@@ -570,10 +570,7 @@ input {
 }
 
 .form-modal{
-    color: #8E8F99;
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.48px;
+   
  
 }
 
@@ -588,12 +585,17 @@ input {
 }
 
 .modal-label{
- 
+    display: inline-block;
+    color:#8E8F99;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.48px;
+    margin-bottom: 4px;
 }
 
 .input-wrap{
    position: relative;
-   margin-bottom: 18px;
+   margin-bottom: 8px;
 }
 
 .input-text{
