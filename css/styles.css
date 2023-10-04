@@ -665,6 +665,10 @@ margin-bottom: 8px;
     padding:8px 16px;
     color: rgba(46, 47, 66, 0.40);
     background-color: transparent;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    outline: transparent;
 
 }
 
@@ -674,13 +678,11 @@ margin-bottom: 8px;
 
 .form-textarea::placeholder{
     color:rgba(46, 47, 66, 0.40);  
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.04em;
+    
 }
 
 .check-wrap{
-     margin-bottom: 24px;
+    margin-bottom: 24px;
 }
 
 .check-text{
