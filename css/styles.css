@@ -590,8 +590,8 @@ input {
 
 .modal-btn-close:hover,
 .modal-btn-close:focus{
-background-color: #404bbf;
-border: none;
+    background-color: #404bbf;
+    border: none;
 }
 
 .icon-close{
@@ -699,15 +699,10 @@ margin-bottom: 8px;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
-    display:flex;
-    align-items: center;
-    position: relative;
-   
 }
 
 .icon-click{
-   width: 100%;
-   height: 100%; 
+   
 } 
 
 .check{
